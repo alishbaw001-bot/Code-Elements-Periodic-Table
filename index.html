@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Elements | HTML CSS JS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">CODE<span>.</span>ELEMENTS</div>
+
+
+  <button id="themeToggle" class="theme-toggle" type="button">
+    ☀️ Light
+  </button>
+</header>
+
+<section class="hero">
+  <span class="eyebrow">LEARN · EXPLORE · CREATE</span>
+  <h1>Your Coding <span>Periodic Table</span></h1>
+  <p>
+    HTML tags, CSS properties aur JavaScript methods explore karo.
+    Kisi bhi box par click karo aur uska kaam, use aur code example samjho.
+  </p>
+</section>
+
+<div class="tools">
+  <button class="filter active" data-category="All">All 72</button>
+  <button class="filter" data-category="HTML">HTML 24</button>
+  <button class="filter" data-category="CSS">CSS 24</button>
+  <button class="filter" data-category="JavaScript">JavaScript 24</button>
+
+  <input
+    id="search"
+    type="search"
+    placeholder="Search: div, color, map..."
+    aria-label="Search coding elements"
+  >
+</div>
+
+<main>
+   <div class="elements-grid" id="gridAll"></div><!-- JavaScript baad mein is khaali div ke andar 72 cards generate karti hai. Isi tarah empty wala message tab show hota hai jab search ya filter mein koi result nahi milta. -->
+ 
+
+  <div class="empty" id="empty">
+    Koi element nahi mila. Doosra naam search karo.
+  </div>
+</main>
+
+<footer>
+  Made for curious minds · HTML · CSS · JavaScript
+</footer>
+
+<!-- Popup -->
+<div class="overlay" id="overlay">
+  <section
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    tabindex="-1"
+  >
+    <div class="modal-top">
+      <div>
+        <div class="modal-category" id="modalCategory"></div>
+        <h2 id="modalTitle"></h2>
+      </div>
+
+      <button class="close" id="close" aria-label="Close popup">×</button>
+    </div>
+
+    <p class="description" id="modalDescription"></p>
+
+    <div class="info">
+      <h3>Ye kya kaam karta hai?</h3>
+      <p id="modalWork"></p>
+    </div>
+
+    <div class="info">
+      <h3>Kis liye use hota hai?</h3>
+      <p id="modalWhy"></p>
+    </div>
+
+    <div class="info">
+      <h3>Code example</h3>
+      <pre id="modalCode"></pre>
+      <button class="copy" id="copy">Copy Example</button>
+    </div>
+
+    <div class="info">
+      <h3>Important points</h3>
+      <ul id="modalPoints"></ul>
+    </div>
+
+    <div class="action-buttons">
+
+  <button id="favoriteBtn">
+    ♡ Add Favorite
+  </button>
+
+  <button id="learnBtn">
+    ✓ Mark as Learned
+  </button>
+
+</div>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
